@@ -1,0 +1,97 @@
+
+.sing-up{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+ }
+ .sing-up form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-60%) scale(1);
+    width: 500px;
+    height: 400px;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-top: 12px #7407FE solid;
+    padding: 50px;
+ }
+ .sing-up form input{
+   padding: 12px;
+   padding-left: 30px;
+   width: 250px;
+   border-radius: 13px;
+border: 2px solid #4d4c4cb4;
+box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.13);
+}
+.sing-up form input[type="submit"]{
+    border-radius: 19px;
+    background-color: #7407FE;
+    box-shadow: 0px 11px 13px -1px rgba(223, 155, 247, 0.60);
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border: 1px white solid;
+    color: #fff;
+    cursor: pointer;
+ }
+ .sing-up form label{
+  font-size: 15px;
+ }
+ .sing-up form label a{
+   text-decoration: none;
+ } 
+
+ .message{
+  position: absolute;
+   margin: 11px 0px;
+   width: 433px;
+   border-radius: 5px;
+   padding: 10px;
+   text-align: center;
+   background-color: rgb(130, 7, 7);
+   color: white;
+   font-size: 20px;
+   top: 20px;
+   left: 530px;
+
+ }
+ 
+ .form-control {
+  position: relative;
+ }
+ .form-control.success input{
+   border-color: green;
+ }
+ .form-control.error input{
+  border-color: red;
+}
+.form-control span{
+  position: absolute;
+  top: 10px;
+  right: 80px;
+  visibility: hidden;
+}
+.form-control small{
+   color: red;
+   position: absolute;
+   left: 150px;
+   top: 30px;
+   visibility: hidden;
+}
+.form-control.error small{
+  visibility: visible;
+}
+.form-control.error span.icons-error{
+   color: red;
+   visibility: visible;
+}
+.form-control.success span.icons-success{
+  color: green;
+  visibility: visible;
+}

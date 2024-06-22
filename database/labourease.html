@@ -1,0 +1,189 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Jun 09, 2024 at 03:55 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.0.30
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `labourease`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `Name` varchar(100) NOT NULL,
+  `Password` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`Name`, `Password`) VALUES
+('nisha', '116');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `category`
+--
+
+CREATE TABLE `category` (
+  `id` int(100) NOT NULL,
+  `Category` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `category`
+--
+
+INSERT INTO `category` (`id`, `Category`) VALUES
+(1, 'mason'),
+(4, 'plumber'),
+(5, 'painter'),
+(6, 'carpenter');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contact`
+--
+
+CREATE TABLE `contact` (
+  `Name` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `message` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `contact`
+--
+
+INSERT INTO `contact` (`Name`, `email`, `message`) VALUES
+('nisha', 'niah789@gmail.com', '      nice website :)'),
+('Rajpal Singh', 'rpsingh273677@gmail.com', '      is it still working\r\n');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `customer`
+--
+
+CREATE TABLE `customer` (
+  `Name` varchar(100) NOT NULL,
+  `image` varchar(100) NOT NULL,
+  `Email` varchar(100) NOT NULL,
+  `Password` varchar(100) NOT NULL,
+  `phone` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `customer`
+--
+
+INSERT INTO `customer` (`Name`, `image`, `Email`, `Password`, `phone`) VALUES
+('Avantik', 'pfp5.jpeg', 'avan34@gmail.com', '941', 2147483647),
+('rohan raj', 'user.png', 'imrohan4568@gmail.com', '1245', 2147483647),
+('smriti', 'user.png', 'smriti456@gmail.com', '6678', 854623215),
+('nisha', 'pfp3.jpeg', 'sona@gmail.com', '123', 2147483647);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `request`
+--
+
+CREATE TABLE `request` (
+  `sender` varchar(100) NOT NULL,
+  `reciver` varchar(100) NOT NULL,
+  `status` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `request`
+--
+
+INSERT INTO `request` (`sender`, `reciver`, `status`) VALUES
+('sona@gmail.com', 'avantika34@gmail.com', 'accepted'),
+('sona@gmail.com', 'nisha@hu', 'pending');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `workers`
+--
+
+CREATE TABLE `workers` (
+  `Name` varchar(100) NOT NULL,
+  `image` varchar(100) NOT NULL,
+  `Email` varchar(100) NOT NULL,
+  `category` varchar(100) NOT NULL,
+  `Password` varchar(100) NOT NULL,
+  `phone` int(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `workers`
+--
+
+INSERT INTO `workers` (`Name`, `image`, `Email`, `category`, `Password`, `phone`) VALUES
+('arav', 'user.png', 'asingh349@gmail.com', 'painter', '896', 25634785),
+('Avantik', 'buil.jpeg', 'avantika34@gmail.com', 'plumber', '532', 21211212),
+('srishti', 'think.png', 'cosmosvenus4@gmail.com', 'mason', '545', 2147483647),
+('nisha', 'holding-wrench.png', 'nisha@hu', 'plumber', '121', 223232323),
+('Rudra', 'user.png', 'ru@gmail.com', 'carpenter', '852', 2147483647),
+('adesh', 'user.png', 'sdesdh345@gmail.com', 'painter', '125', 2147483647);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `category`
+--
+ALTER TABLE `category`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `customer`
+--
+ALTER TABLE `customer`
+  ADD UNIQUE KEY `Email` (`Email`);
+
+--
+-- Indexes for table `workers`
+--
+ALTER TABLE `workers`
+  ADD UNIQUE KEY `Email` (`Email`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `category`
+--
+ALTER TABLE `category`
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

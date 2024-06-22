@@ -1,0 +1,228 @@
+*{
+    text-decoration: none;
+    margin: 0;
+ }
+ 
+
+ .Account_info{
+   display: flex;
+    min-height: 100vh;
+ }
+
+/* 
+SIDE BAR */
+
+
+ .side_bar{
+  background-color: white;
+  width: 210px;
+box-shadow: -2px 0px 12px 0px #000;
+ }
+ .logo{
+   margin: 10px;
+ }
+ .logo img{
+   max-width: 20%;
+   float: left;
+   padding-top: 15px;
+   padding-right: 5px;
+  
+}
+ .logo h1{
+   padding-top: 20px;
+   font-size: 1.1rem;
+}
+
+
+ .side_bar .sidebar-list{
+    position: absolute;
+    top: 200px;
+ }
+ .side_bar .sidebar-list .list-item{
+    display: block;
+   cursor: pointer;
+    padding: 15px;
+    margin-left: -40px;
+    margin-right: -155px;
+    font-size: large;
+    text-decoration: none;
+    
+ }
+ .side_bar .sidebar-list .list-item :hover{
+   color: #7407FE;
+   font-size: 1.1rem;
+ }
+ .side_bar .sidebar-list .list-item a{
+    color: #000;
+ }
+ .side_bar .sidebar-list .list-item.active{
+    border-left: 6px solid #7407FE;
+    background: linear-gradient(90deg, rgba(114, 3, 255, 0.07) 17.45%, rgba(11, 5, 5, 0.00) 90.59%);
+ }
+ .side_bar .sidebar-list button{
+    position: absolute;
+    top: 430px;
+    border-radius: 30px;
+    border: 2px #7407FE solid;
+    padding: 10px;
+    width: 100px;
+    margin-left: -30px;
+    background-color: white;
+        cursor: pointer;
+ }
+
+
+/* PROFILE PIC */
+
+
+.profile_info{
+  width: 100%;   
+}
+.profile_pic{
+padding-left: 600px;
+padding-top:40px ;
+
+}
+.profile_pic img {
+    max-width: 16%;
+    border: 2px black solid;
+    border-radius: 100%;
+}
+
+.profile_pic .edit-btn{
+   background-color:7407FE;
+   height: 40px;
+   max-width:5%;
+   border-radius: 50%;
+   transform: translate(86px,-35px);
+   cursor: pointer;
+}
+.profile_pic .edit-btn span{
+   color: white;
+   transform: translate(7px,6px);
+}
+
+
+/* BASIC INFO */
+
+
+.basic_info{
+    margin-left: 50px;
+    padding: 20px;
+}
+.basic_info h1{
+   margin-bottom: 60px;
+   font-size: 3rem;
+   color: #3b3a3a;
+}
+.basic_info .info_box{
+   width: 600px;
+}
+.basic_info .info_box .box{
+   display: flex;
+   align-items: center;
+   margin: 10px;
+   padding-bottom: 20px;
+   border-bottom: 1px solid rgba(0, 0, 0, 0.37);
+
+}
+.basic_info .info_box .box .infocontainer{
+   margin-right: 200px;
+   width: 100px;
+}
+.basic_info .info_box .box .infocontainer h3{
+   max-width: fit-content;
+   padding-bottom: 5px;
+   font-size:15px;
+   color: #3b3a3a;
+}
+.basic_info .info_box .box .infocontainer h4{
+   font-size: 25px;
+}
+.basic_info .info_box .box span{
+   margin-left: 200px;
+   cursor: pointer;
+}
+
+
+/* POPUP */
+
+.popup .overlay{
+   position: fixed;
+   top: 0px;
+   left: 0px;
+   width: 100vw;
+   height: 100vh;
+   background: rgba(0, 0, 0, 0.7);
+   z-index: 1;
+   display: none;
+}
+.popup .content{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%) scale(0);
+   background: #fff;
+   width: 450px;
+   height: 220px;
+   z-index: 2;
+   text-align: center;
+   padding: 20px;
+   box-sizing: border-box;
+   border-radius: 30px;
+}
+ .popup .close-btn{
+   cursor: pointer;
+   position: absolute;
+   right: 20px;
+   top: 20px;
+   width: 20px;
+   height: 20px; 
+   padding: 5px;
+   background: #222;
+   color:#fff;
+   border-radius: 50%;
+ }
+ .popup .content form{
+   padding: 10px;
+   height: 150px;
+   text-align: center;
+ }
+ .popup .content form input{
+   padding: 10px;
+   padding-left: 70px;
+   margin: 30px;
+
+ }
+ .popup .content form button{
+   margin-top: 20px;
+  padding: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: #7407FE;
+  border-radius: 37px;
+  border: unset;
+  cursor: pointer;
+  color: #fff;
+ }
+ .popup.active .overlay{
+   display: block;
+ }
+ .popup.active .content{
+   transition: all 300ms ease-in-out;
+   transform: translate(-50%,-50%) scale(1);
+ }
+
+ .message{
+    margin: 11px 0px;
+    width: 433px;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(130, 7, 7);
+    color: white;
+    font-size: 20px;
+    top: 20px;
+    left: 530px;
+ 
+  }

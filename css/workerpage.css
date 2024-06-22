@@ -1,0 +1,217 @@
+*{
+
+  text-decoration: none;
+
+     margin: 0;
+
+}
+body{
+  overflow: hidden;
+  position: relative;
+
+}
+.dashboard {
+  position: relative;
+  width: 100%;
+  height: 615px;
+  overflow: hidden;
+}
+.dashboard img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+ .navdiv{
+  padding: 10px 50px;
+  box-shadow: 0px 7px 16px 0px rgba(0, 0, 0, 0.25);    height: 60px;
+   background-color: #000;
+ 
+}
+ .navdiv .navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+  height: 62px;
+}
+ .navdiv .navbar .logo img{
+  max-width: 17%;
+  float: left;
+  padding-top: 2px;
+ 
+}
+ .navdiv .navbar .logo h1{
+  padding-top: 15px;
+  font-size: 1.5rem;
+  color: #FFF;
+}
+
+.navdiv .navbar .icons{
+  display: flex;
+ align-items: center;
+ justify-content: space-between;
+margin-right: -100px;
+
+}
+ .navdiv .navbar .icons .imabtn{
+    width: 200px;
+    padding: 5px;
+}
+.navdiv .navbar .icons .imabtn .md-48{
+    color: #fff;
+
+}
+ .navdiv .navbar .icons  h1{
+    color: #fff;
+    font-size: 25px;
+    overflow: hidden;
+    padding: 10px;
+}
+ .navdiv .navbar .icons .imabtn  img {
+    max-width: 24%;
+    border: 3px  #fff solid;
+    border-radius: 100%;
+
+}
+ .navdiv .navbar .icons #profiledown-btn{
+  cursor: pointer;
+ 
+
+}
+
+ .navdiv .navbar .profile-dropdown .profile-dorpdown-list{
+   border-radius: 10px;
+   padding-right: 30px;
+   max-height: 0px;
+   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+   position: absolute;
+   top: 90px;
+   width:130px;
+   right: 20px;
+   overflow: hidden; 
+   z-index: 10000;
+   background-color: rgb(255, 255, 255);
+}
+
+.navdiv .navbar .profile-dropdown .profile-dorpdown-list.show{
+  max-height: 250px;
+}
+
+.navdiv .navbar .profile-dropdown .list-item{
+  padding-top:4px;    
+}
+
+.navdiv .navbar .profile-dropdown .list-item a:hover{
+  border-bottom: unset;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+} 
+
+.navdiv .navbar .profile-dropdown .list-item a:hover .span{
+  color: #7407FE;
+  font-size: 27px !important;
+}
+
+.navdiv .navbar .profile-dropdown .list-item a:hover h4{
+  font-size: 1.3rem;
+  color: #7407FE;
+}
+
+
+
+.profile-dropdown .list-item a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  margin-right: -32px;
+  margin-left: -42px;
+  padding: 8px;
+  cursor: pointer;
+
+}
+.profile-dropdown .list-item span{
+ 
+   margin-right: 30px;
+   margin-left: 15px;
+}
+.profile-dropdown .list-item h4{
+  padding-bottom: 8px;
+  font-size: 1.2rem;
+}
+.profile-dropdown .list-item button{
+  margin-top: 60px;
+  border-radius: 35px;
+  border: 2.5px solid #7407FE;
+  background: #FFF;
+  width: 105px;
+  height: 40px;
+  cursor: pointer;
+  margin-left: -30px;
+  
+}
+/*=======================================================================================================*/
+.userInfo{
+  position: absolute;
+  top: 0px;
+  left: 100px;
+ margin: 50px;
+ width: 80%;
+}
+.userInfo .header {
+  background-color:#fff;
+ border: 1px #000 solid;
+ padding:30px 0px 30px 30px;
+ width: 100%;
+ margin-bottom: 10px;
+ border-radius: 10px;
+}
+.userInfo .header h1{
+  padding-bottom: 10px;
+}
+.userInfo .header .sort input[type='search']{
+ padding: 10px;
+ border-radius: 5px;
+ border: 1px #000 solid;
+ padding-left: 35px;
+ width: 450px;
+ position: relative;
+}
+.userInfo .header .sort select{
+ padding: 10px;
+ border-radius: 5px;
+ width: 150px;
+}
+.userInfo .header .sort select option{
+ text-transform: capitalize;
+}
+.userInfo .header .sort span{
+ position: absolute;
+ font-size: 25px;  
+ left: 40px;
+ top: 87px; 
+ color: #979393;
+ z-index: 2;
+}
+
+
+/*=====================================================content============================================================*/
+.content{
+ width: 80%;
+ padding: 20px;
+ background-color: #fff;
+ border:1px #000 solid;
+ margin-top:20px;
+ border-radius: 10px;
+}
+.content p{
+font-size: 20px;
+font-weight: 600;
+}
+table{
+ width: 100%;
+ margin: 0px;
+}
+
+.content table #heading{
+ background-color: #DDD;
+}

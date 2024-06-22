@@ -1,0 +1,289 @@
+*{
+   text-decoration: none;
+   margin: 0;
+}
+
+body{
+    position: relative;
+    overflow: hidden;
+  
+}
+.image {
+    position: relative;
+    width: 100%;
+    height: 615px;
+    overflow: hidden;
+}
+.image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.search, .worker_info {
+    z-index: 10; 
+}
+
+.userpage .navdiv{
+    padding: 10px 50px;
+    box-shadow: 0px 7px 16px 0px rgba(0, 0, 0, 0.25);    height: 60px;
+     background-color: #000;
+
+   
+     
+
+
+}
+.userpage .navdiv .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+}
+.userpage .navdiv .navbar .logo img{
+    max-width: 17%;
+    float: left;
+    padding-top: 2px;
+   
+}
+.userpage .navdiv .navbar .logo h1{
+    padding-top: 15px;
+    font-size: 1.5rem;
+    color: #FFF;
+}
+
+
+.userpage .navdiv .navbar .icons{
+    display: flex;
+   align-items: center;
+   justify-content: space-between;
+  margin-right: -100px;
+
+  }
+  .userpage .navdiv .navbar .icons .imabtn{
+      width: 200px;
+      padding: 5px;
+  }
+  .userpage .navdiv .navbar .icons .md-48{
+      color: #fff;
+  
+  }
+  .userpage .navdiv .navbar .icons  h1{
+      color: #fff;
+      font-size: 25px;
+      overflow: hidden;
+      padding: 10px;
+  }
+  .userpage .navdiv .navbar .icons  img {
+      max-width: 24%;
+      border: 3px  #fff solid;
+      border-radius: 100%;
+  
+  }
+.userpage .navdiv .navbar .icons #profiledown-btn{
+    cursor: pointer;
+
+
+}
+
+.userpage .navdiv .navbar .profile-dropdown .profile-dorpdown-list{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding-right: 30px;
+     max-height: 0px;
+     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    top: 90px;
+    width:130px;
+    right: 20px;
+   overflow: hidden; 
+   z-index: 10000;
+}
+
+.userpage .navdiv .navbar .profile-dropdown .profile-dorpdown-list.show{
+    max-height: 250px;
+}
+
+.userpage .navdiv .navbar .profile-dropdown .list-item{
+    padding-top:4px;    
+}
+
+.userpage .navdiv .navbar .profile-dropdown .list-item a:hover{
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+border-bottom: unset;
+} 
+
+.userpage .navdiv .navbar .profile-dropdown .list-item a:hover .span{
+    color: #7407FE;
+    font-size: 27px !important;
+}
+
+.userpage .navdiv .navbar .profile-dropdown .list-item a:hover h4{
+font-size: 1.3rem;
+color: #7407FE;
+}
+
+
+
+.profile-dropdown .list-item a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    margin-right: -32px;
+    margin-left: -42px;
+    padding: 8px;
+    cursor: pointer;
+
+}
+.profile-dropdown .list-item span{
+   
+     margin-right: 30px;
+     margin-left: 15px;
+}
+.profile-dropdown .list-item h4{
+    padding-bottom: 8px;
+    font-size: 1.2rem;
+}
+.profile-dropdown .list-item button{
+   margin-top: 60px;
+    border-radius: 35px;
+    border: 2.5px solid #7407FE;
+    background: #FFF;
+    width: 105px;
+    height: 40px;
+    cursor: pointer;
+    
+}
+
+
+/* SEARCH BOX*/
+
+
+.userpage .search{
+    border-radius: 37px;
+    background: #000;
+    box-shadow: 9px 8px 12px 3px rgba(0, 0, 0, 0.23);
+    position: absolute;
+    top: 100px;
+    left: 50px;  
+}  
+.userpage .search div{
+    width: 352px;
+    height: 320px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}   
+.userpage .search form {
+    position: absolute;
+    top: 42px;
+    left: 50px;
+    width: 250px;
+    height: 287px;
+    
+}
+
+.userpage .search form label{
+    color: #FFF;
+   font-size: 25px;
+}
+.userpage .search form input,select,button{
+    padding: 8px 10px;
+    margin: 15px 0;
+   width: 100%;
+   border-radius:10px ;
+   
+}
+.userpage .search form input[type=number]{
+    width: 225px ;
+}
+.userpage .search form button{
+    border-radius: 8px;
+    border: 1px solid #FFF;
+    background: #7407FE;
+    box-shadow: 2px 4px 8px 4px rgba(139, 142, 215, 0.51);
+    color: white;
+    width: 200px;
+    margin-left: 22px;
+}
+input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* input[type="number"] {
+        -moz-appearance: textfield;
+    } */
+
+
+/* Worker iformation*/
+
+
+.worker_info{
+    position: absolute;
+    left: 420px;
+    top: 20px;
+    border-radius: 29px;
+   padding: 40px;
+   border: 1px solid #000;
+   width: 500px;
+   height: 450px;  
+    background-color: white;
+   display: block;
+}
+.worker_info.active{
+    display: block;
+   
+}
+.worker_info img{
+    max-width: 10%;
+    float: left;
+    border-radius: 100px;
+    margin: 0px 10px;
+}
+.worker_info .card{
+    padding: 10px;
+    overflow: hidden;
+    overflow-y: scroll;
+    display: flex;
+}
+.worker_info .card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10px;
+    margin: 15px 0; 
+    border-radius: 18px;
+border: 1px solid #000;
+background: #FFF;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.worker_info button{
+    position: absolute;
+    border-radius: 8px;
+    border: 1px solid #FFF;
+    background: #7407FE;
+    box-shadow: 2px 4px 8px 4px rgba(139, 142, 215, 0.51);
+    color: white;
+    width: 500px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/*=====================scrollbar====================*/
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    border-radius: 50px;
+    background-color: #fff;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #000000dd;
+    border-radius: 100px;
+   
+}

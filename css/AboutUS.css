@@ -1,0 +1,95 @@
+body{
+    margin: 0px;
+    position: relative;
+  
+}
+
+/*=============================================================nav bar==============================================================*/
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    background-color: #000;
+}
+.navbar .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -100px;
+}
+.navbar .logo img{
+    max-width: 10%;
+}
+.navbar .logo h1{
+
+  color: #fff;
+}
+.navbar .link{
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+    font-size: 19px;
+}
+.navbar .link h3{
+    margin-right: 40px;
+    cursor: pointer;
+}
+.navbar .link h3 a{
+    text-decoration: none;
+    color: #fff;
+}
+/* .navbar .link h3 .navlink.active{
+    text-decoration: underline;
+    
+} */
+.navbar .button {
+    display: flex;
+    align-items: center;
+    margin-left: 80px;
+}
+.navbar .button button{
+    margin-left: 20;
+    padding: 9px;
+    width: 110px;
+    cursor: pointer;
+}
+.navbar .button .login{
+border-radius: 19px;
+border: 1px solid #fff;
+background-color: #000;
+color: #fff;
+}
+
+.navbar .button .singup{
+    background-color: #7407FE;
+   border-radius: 19px;
+   border:unset;
+   color: #fff;
+}
+/*===============================================body======================================================*/
+
+.aboutus{
+    position: absolute;
+    top: 120;
+    left: 90;
+    width: 80%;
+}
+.aboutus h1{
+    color: #7407FE;
+    font-size: 40px;
+}
+p{
+    font-size: 25px;
+  padding-left: 50px;
+}
+ul{
+    padding-left: 70px;
+
+}
+ ul li{
+    font-size: 25px;
+}

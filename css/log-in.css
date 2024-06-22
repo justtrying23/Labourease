@@ -1,0 +1,47 @@
+.sing-up{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+ }
+ .sing-up form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-55%) scale(1);
+    width: 470px;
+    height: 300px;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-top: 12px #7407FE solid;
+    padding: 50px;
+ }
+ .sing-up form input{
+   padding: 12px;
+   padding-left: 30px;
+   width: 250px;
+   border-radius: 13px;
+border: 2px solid #4d4c4cb4;
+box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.13);
+}
+.sing-up form button{
+    border-radius: 19px;
+    background: #7407FE;
+    box-shadow: 0px 11px 13px -1px rgba(223, 155, 247, 0.60);
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border: 1px white solid;
+    color: #fff;
+    margin-top: 10px;
+ }
+
+ .sing-up form a{
+    font-size: 14px;
+    float: right;
+   text-decoration: none;
+ } 

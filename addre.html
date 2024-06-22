@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Display Users Within 10km</title>
+</head>
+<body>
+  <p>Users within 10km of each other:</p>
+  <ul id="usersList"></ul>
+
+  <script>
+    const degreesToRadians = (degrees) => {
+      return degrees * (Math.PI / 180);
+    };
+
+    const calculateDistance = (lat1, lon1, lat2, lon2) => {
+      const earthRadiusKm = 6371;
+
+      const dLat = degreesToRadians(lat2 - lat1);
+      const dLon = degreesToRadians(lon2 - lon1);
+
+      const a =
+        Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+        Math.cos(degreesToRadians(lat1)) * Math.cos(degreesToRadians(lat2)) *
+        Math.sin(dLon / 2) * Math.sin(dLon / 2);
+
+      const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+      return earthRadiusKm * c;
+    };
+
+    const displayUsersWithinDistance = (usersData, distanceThreshold) => {
+      const usersList = document.getElementById('usersList');
+      usersList.innerHTML = '';
+
+      for (let i = 0; i < usersData.length; i++) {
+        const currentUser = usersData[i];
+        const nearbyUsers = [currentUser.id]; // Include the current user in the nearby users list
+
+        for (let j = 0; j < usersData.length; j++) {
+          if (i !== j) {
+            const distance = calculateDistance(
+              currentUser.latitude,
+              currentUser.longitude,
+              usersData[j].latitude,
+              usersData[j].longitude
+            );
+
+            if (distance <= distanceThreshold) {
+              nearbyUsers.push(usersData[j].id);
+            }
+          }
+        }
+
+        const listItem = document.createElement('li');
+        listItem.textContent = `User ${currentUser.id}: Nearby Users - ${nearbyUsers.join(', ')}`;
+        usersList.appendChild(listItem);
+      }
+    };
+
+    // Example user data - replace with your users' coordinates
+    const usersData = [
+      { id: 1, latitude: 40.7128, longitude: -74.0060 },
+      { id: 2, latitude: 40.7282, longitude: -73.7949 },
+      { id: 3, latitude: 40.7484, longitude: -73.9857 },
+      // Add more user data as needed
+    ];
+
+    const distanceThreshold = 10; // Distance threshold in kilometers
+
+    displayUsersWithinDistance(usersData, distanceThreshold);
+  </script>
+</body>
+</html>

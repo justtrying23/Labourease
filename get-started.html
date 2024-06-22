@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link rel="stylesheet" href="css/icon.css">
+    <link rel="stylesheet" href="css/get-started.css">
+    <title>Get Started with LABOURease</title>
+</head>
+<body>
+    <div class="main">
+        <div class="logo">
+            <img src="images/re-logo.png">
+        </div>
+        <div class="contain">
+        <h1>How do you want to use LABOURease?</h1>
+        <div  onclick="changeHref('Ccreate.php')"  class="customer">
+            <span class="material-symbols-outlined">search</span>
+            <p>I'm here to find talented Labour</p>
+        </div>
+        <div  onclick="changeHref('Wcreate.php')"  class="worker">
+        <span class="material-symbols-outlined">construction</span>
+        <p>I'm here to find work and earn</p>
+        </div>
+        <a href="#" id="createAccount"><button class="btn"><b>Create Account</b></button></a>
+    </div>
+</div>
+    <div class="image">
+        <img  id="myImage" src="images/think.png">
+    </div>
+   <script>
+    function changeHref(newHref) {
+        document.getElementById('createAccount').href = newHref;
+      document.querySelector('.btn').classList.add('active');
+    }
+   </script>
+</body>
+</html>

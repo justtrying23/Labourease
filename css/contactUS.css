@@ -1,0 +1,99 @@
+body{
+    margin: 0;
+    position: relative;
+   }
+   .container{
+       position: absolute;
+       left: 550;
+       top: 150;
+   }
+   
+   input[type=submit]{
+       background-color: #7407FE;
+       color: white;
+       padding: 12px 20px;
+       border:none;
+       border-radius: 4px;
+       cursor:pointer;
+   }
+   
+   input[type=submit]:hover{
+       background-color: #872cfe;
+   }
+
+   input[type=text], select, textarea {
+    width: 100%; 
+    padding: 12px;  
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical;
+  }
+  
+  .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    background-color: #000;
+}
+.navbar .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -100px;
+}
+.navbar .logo img{
+    max-width: 10%;
+}
+.navbar .logo h1{
+
+  color: #fff;
+}
+.navbar .link{
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+    font-size: 19px;
+}
+.navbar .link h3{
+    margin-right: 40px;
+    cursor: pointer;
+}
+.navbar .link h3 a{
+    text-decoration: none;
+    color: #fff;
+}
+/* .navbar .link h3 .navlink.active{
+    text-decoration: underline;
+    
+} */
+.navbar .button {
+    display: flex;
+    align-items: center;
+    margin-left: 80px;
+}
+.navbar .button button{
+    margin-left: 20;
+    padding: 9px;
+    width: 110px;
+    cursor: pointer;
+}
+.navbar .button .login{
+border-radius: 19px;
+border: 1px solid #fff;
+background-color: #000;
+color: #fff;
+}
+
+.navbar .button .singup{
+    background-color: #7407FE;
+   border-radius: 19px;
+   border:unset;
+   color: #fff;
+}
